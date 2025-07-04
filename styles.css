@@ -21,3 +21,20 @@ body {
 img {
     display: block;
 }
+
+.container{
+    margin: auto 0px;
+    padding: 0 30px;
+    max-width: 1000px;
+}
+
+.profile-image > img {
+    border: 6px solid #b7a5a;
+    border-radius: 50%;
+}
+
+/* .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

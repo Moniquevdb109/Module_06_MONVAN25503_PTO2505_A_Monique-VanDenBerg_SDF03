@@ -156,4 +156,19 @@ img {
     margin: auto;
 }
 
+/* Loader Animation */
 
+.loader{
+    border: 8px solid rgba(1, 1, 1, 0.66);
+    border-bottom: 8px solid rgba(1, 1, 1, 0.16);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    margin: 10px auto;
+    animation: loader 1s infinite linear;
+}
+
+@keyframes loader{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}

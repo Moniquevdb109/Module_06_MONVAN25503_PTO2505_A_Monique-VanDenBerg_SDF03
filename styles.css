@@ -23,7 +23,7 @@ img {
 }
 
 .container{
-    margin: auto 20px;
+    margin: 0 auto;
     padding: 10px 30px;
     max-width: 1000px;
 }
@@ -37,7 +37,7 @@ img {
 
 .profile-user-settings {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 20px;
 }
@@ -45,7 +45,7 @@ img {
  .profile-user-name{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: 24px;
+    font-size: 28px;
     color: #171818;
  }
 
@@ -70,7 +70,7 @@ img {
  .profile-stats {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin-left: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -84,13 +84,13 @@ img {
  }
 
  .profile-stat-count {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
  }
 
  .profile-bio {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
  }
 
  .profile-real-name {
@@ -107,6 +107,7 @@ img {
 .profile-info-right {
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 
 /* Grid Layout */
@@ -114,7 +115,6 @@ img {
 .gallery{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
     gap: 20px;
 }
 
@@ -171,4 +171,47 @@ img {
 @keyframes loader{
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        padding: 6px;
+    }
+
+    .profile-image > img{
+        justify-content: center;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    .profile-user-name{
+        font-size: 22px;
+    }
+
+    .profile-user-settings {
+        margin-top: 0px;
+    }
+
+    .profile-stats {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-size: 12px;
+    }
+
+    .profile-stat-count{
+        font-size: 14px;
+    }
+
+    .profile-bio{
+        font-size: 12px;
+    }
+
+    .profile-info-right{
+        margin-bottom: 15px;
+    }
+
+    .gallery{
+    grid-template-columns: repeat(1,1fr);
+    gap: 10px;
+    }
 }

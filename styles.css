@@ -22,6 +22,8 @@ img {
     display: block;
 }
 
+/* Flex Layout */
+
 .container{
     margin: 0 auto;
     padding: 10px 30px;
@@ -173,9 +175,11 @@ img {
     100% {transform: rotate(360deg);}
 }
 
-@media screen and (max-width: 480px) {
+/* Tablet Display */
+
+@media screen and (max-width: 768px) {
     .container{
-        padding: 6px;
+        padding: 6px 5px;
     }
 
     .profile-image > img{
@@ -210,8 +214,72 @@ img {
         margin-bottom: 15px;
     }
 
+    .profile {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    flex-wrap: wrap;
+}
+
+    .gallery{
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    }
+}
+
+/* Phone Display */
+
+@media screen and (max-width: 480px) {
+    .container{
+        padding: 6px;
+    }
+
+    .profile-image > img{
+        justify-content: center;
+        margin-left: 80px;
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+         border: 8px solid #066348;
+    }
+    .profile-user-name{
+        font-size: 22px;
+    }
+
+    .profile-user-settings {
+        margin-top: 0px;
+    }
+
+    .profile-stats {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    font-size: 12px;
+    }
+
+    .profile-stat-count{
+        font-size: 14px;
+    }
+
+    .profile-bio{
+        font-size: 12px;
+    }
+
+    .profile-info-right{
+        margin-bottom: 15px;
+    }
+
+     .profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; 
+    flex-wrap: wrap;
+
+     }
     .gallery{
     grid-template-columns: repeat(1,1fr);
     gap: 10px;
     }
 }
+
+
